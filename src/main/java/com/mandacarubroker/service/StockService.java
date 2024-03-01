@@ -31,8 +31,8 @@ public class StockService {
 
     public Stock createStock(final RequestStockDTO data) {
         validateRequestStockDTO(data);
-        final Stock novaAcao = new Stock(data);
-        return stockRepository.save(novaAcao);
+        final Stock newAction = new Stock(data);
+        return stockRepository.save(newAction);
     }
 
     public Optional<Stock> updateStock(final String id, final Stock updatedStock) {
