@@ -17,11 +17,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Stock {
-
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
-
     private String symbol;
     private String companyName;
     private double price;

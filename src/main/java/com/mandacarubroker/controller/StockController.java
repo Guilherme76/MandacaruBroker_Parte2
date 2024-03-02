@@ -1,6 +1,5 @@
 package com.mandacarubroker.controller;
 
-
 import com.mandacarubroker.domain.stock.*;
 import com.mandacarubroker.service.*;
 import org.springframework.http.*;
@@ -37,7 +36,7 @@ public class StockController {
 
     @PutMapping("/{id}")
     public Stock updateStock(@PathVariable final String id,
-                             @RequestBody final Stock updatedStock) {
+        @RequestBody final Stock updatedStock) {
         return stockService.updateStock(id, updatedStock).orElse(null);
     }
 
@@ -45,4 +44,6 @@ public class StockController {
     public void deleteStock(@PathVariable final String id) {
         stockService.deleteStock(id);
     }
+
 }
+
