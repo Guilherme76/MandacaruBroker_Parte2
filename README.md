@@ -158,7 +158,7 @@ DELETE /stocks/3</code></p>
 
 <h2>Uso</h2>
 <ol>
-  <li>Clone o repositório: <code>git clone https://github.com/Guilherme76/mandacaru1_Final.git</code></li>
+  <li>Clone o repositório: <code>git clone https://github.com/Guilherme76/MandacaruBroker_Parte2</code></li>
   <li>Importe o projeto em sua IDE preferida.</li>
   <li>Configure o banco de dados e as propriedades de aplicação conforme necessário. A aplicação original utiliza o PostgreSQL como banco de dados. Certifique-se de ter um servidor PostgreSQL em execução e atualize as configurações de banco de dados no arquivo <code>application.properties</code>.</li>
   <li>Execute o aplicativo Spring Boot.</li>
