@@ -76,6 +76,11 @@
 			<version>5.10.2</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>0.12.5</version>
+		</dependency>
 
 
 	</dependencies>
