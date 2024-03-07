@@ -1,7 +1,8 @@
 package com.mandacarubroker.controller;
 
-import com.mandacarubroker.domain.stock.*;
-import com.mandacarubroker.service.*;
+import com.mandacarubroker.domain.Stock;
+import com.mandacarubroker.helpers.RequestStockDTO;
+import com.mandacarubroker.services.*;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 

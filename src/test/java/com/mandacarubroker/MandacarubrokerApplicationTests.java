@@ -1,8 +1,7 @@
 package com.mandacarubroker;
 
-import com.mandacarubroker.domain.stock.RequestStockDTO;
-import com.mandacarubroker.domain.stock.Stock;
-import org.hibernate.exception.ConstraintViolationException;
+import com.mandacarubroker.helpers.RequestStockDTO;
+import com.mandacarubroker.domain.Stock;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
