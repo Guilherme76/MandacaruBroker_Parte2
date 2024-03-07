@@ -1,8 +1,7 @@
 package com.mandacarubroker.controller;
-import com.mandacarubroker.Users.RequestUserDTO;
-import com.mandacarubroker.service.UsersService;
-import com.mandacarubroker.Users.Users;
-import com.mandacarubroker.domain.stock.RequestStockDTO;
+import com.mandacarubroker.helpers.RequestUserDTO;
+import com.mandacarubroker.services.UsersService;
+import com.mandacarubroker.users.Users;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +25,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<Users> createStock(@RequestBody final RequestUserDTO data) {
+    public ResponseEntity<Users> createUser(@RequestBody final RequestUserDTO data) {
         final Users createUser = usersService.createUsers(data);
         return ResponseEntity.ok(createUser);
     }

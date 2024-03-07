@@ -1,14 +1,12 @@
-package com.mandacarubroker.Users;
+package com.mandacarubroker.users;
 
-import com.mandacarubroker.domain.stock.RequestStockDTO;
+import com.mandacarubroker.helpers.RequestUserDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
 
-import java.util.Date;
-
-@Table(name = "users")
-@Entity(name = "users")
+@Table(name = "use")
+@Entity(name = "use")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,7 +21,7 @@ public class Users {
     private String email;
     private String firstName;
     private String lastName;
-    private Date birthDate;
+    private String birthDate;
     private double balance;
 
 
@@ -36,5 +34,5 @@ public class Users {
         this.birthDate = requestUserDTO.birthDate();
         this.balance = requestUserDTO.balance();
     }
-
 }
+

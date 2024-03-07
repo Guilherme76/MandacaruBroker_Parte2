@@ -1,8 +1,8 @@
-package com.mandacarubroker.service;
+package com.mandacarubroker.services;
 
-import com.mandacarubroker.domain.stock.RequestStockDTO;
-import com.mandacarubroker.domain.stock.Stock;
-import com.mandacarubroker.domain.stock.StockRepository;
+import com.mandacarubroker.helpers.RequestStockDTO;
+import com.mandacarubroker.domain.Stock;
+import com.mandacarubroker.domain.StockRepository;
 
 import jakarta.validation.*;
 

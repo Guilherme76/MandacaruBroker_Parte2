@@ -1,10 +1,8 @@
-package com.mandacarubroker.service;
+package com.mandacarubroker.services;
 
-import com.mandacarubroker.Users.RequestUserDTO;
-import com.mandacarubroker.Users.UserRepository;
-import com.mandacarubroker.Users.Users;
-import com.mandacarubroker.domain.stock.RequestStockDTO;
-import org.codehaus.plexus.util.dag.DAG;
+import com.mandacarubroker.helpers.RequestUserDTO;
+import com.mandacarubroker.users.UsersRepository;
+import com.mandacarubroker.users.Users;
 import org.springframework.stereotype.Service;
 
 
@@ -13,9 +11,9 @@ import java.util.Optional;
 
 @Service
 public class UsersService {
-    private final UserRepository userRepository;
+    private final UsersRepository userRepository;
 
-    public UsersService(final UserRepository userRepository) {
+    public UsersService(final UsersRepository userRepository) {
         this.userRepository = userRepository;
     }
 
