@@ -78,4 +78,14 @@ class RequestStockDTOTest {
 		Assertions.assertEquals(price, requestStockDTO.price(), 0.001, "Price should match");
 	}
 
+	@Test
+    	void testCreateRequestStockDTOWithInvalidSymbol() {
+        	// Arrange
+        	String invalidSymbol = "A";  // Símbolo contendo menos de 3 caracteres
+
+        	// Act & Assert
+        	Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            	new RequestStockDTO(invalidSymbol, "Company XYZ", 50.0);
+        	});
+    	}
 }
