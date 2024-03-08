@@ -30,12 +30,6 @@ public class User implements UserDetails {
     private double balance;
     private UserRole role;
 
-    public User(String login, String password, UserRole role) {
-        this.login = login;
-        this.password = password;
-        this.role = role;
-    }
-
     public User(String login, String password, String email, String firstName, String lastName, String birthDate, double balance, UserRole role) {
         this.login = login;
         this.password = password;
@@ -45,6 +39,17 @@ public class User implements UserDetails {
         this.birthDate = birthDate;
         this.balance = balance;
         this.role = role;
+    }
+
+    public void addToBalance(double amount) {
+        this.balance += amount;
+    }
+
+    public void subtractFromBalance(double amount) {
+        if (this.balance < amount) {
+            throw new IllegalArgumentException("Insufficient balance for user with id: " + id);
+        }
+        this.balance -= amount;
     }
 
     @Override

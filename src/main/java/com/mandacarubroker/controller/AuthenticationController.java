@@ -4,6 +4,7 @@ import com.mandacarubroker.domain.User;
 import com.mandacarubroker.domain.UserRepository;
 import com.mandacarubroker.helpers.LoginResponseDTO;
 import com.mandacarubroker.helpers.RegisterDTO;
+import com.mandacarubroker.services.AuthorizationService;
 import com.mandacarubroker.services.TokenService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +12,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 @RestController
 @RequestMapping("/auth")
 public class AuthenticationController {
-
+    @Autowired
+    private AuthorizationService authorizationService;
     @Autowired
     private TokenService tokenService;
     @Autowired
@@ -44,5 +46,10 @@ public class AuthenticationController {
         this.repositoryUserLogin.save(newUser);
 
         return ResponseEntity.ok().build();
+    }
+
+    @GetMapping
+    public List<User> getAllUsers(){
+        return authorizationService.getAllUser();
     }
 }
