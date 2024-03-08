@@ -39,7 +39,7 @@ public class AuthenticationController {
         if(this.repositoryUserLogin.findByLogin(data.login()) != null) return ResponseEntity.badRequest().build();
 
         String encryptedPassword =  new BCryptPasswordEncoder().encode(data.password());
-        User newUser = new User(data.login(), encryptedPassword, data.role());
+        User newUser = new User(data.login(), encryptedPassword,data.email(), data.firstName(), data.lastName(), data.birthDate(), data.balance(), data.role());
 
         this.repositoryUserLogin.save(newUser);
 
