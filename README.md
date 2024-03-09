@@ -144,9 +144,82 @@
 
 <p>Este endpoint permite a exclusão de uma ação específica com base no ID fornecido. Uma vez excluída, a ação não estará mais disponível na lista de ações.</p>
 
+<h2>Novas Rotas</h2>
+
+<h3>Autenticação de Usuários - Register/Login</h3>
+<p>Para autenticar um usuário e obter um token JWT, envie uma solicitação POST para o endpoint <code>/auth/register</code> com as credenciais do usuário no corpo da solicitação</p>
+
+<p><strong>Exemplo de Solicitação:</strong></p>
+<pre><code>POST /auth/register
+Content-Type: application/json
+{
+    "login": "novo_usuario",
+    "password": "sua_senha_segura",
+    "email": "exemplo@gmail.com",
+    "firstName": "Primeiro Nome",
+    "lastName" : "Sobrenome",
+    "birthDate": "1990-01-01",
+    "balance": 100,
+    "role" : "ROLE_USER"
+}
+</code></pre>
+
+<p>Para autenticar um usuário e obter um token JWT, envie uma solicitação POST para o endpoint <code>/auth/login</code> com as credenciais do usuário no corpo da solicitação</p>
+
+<pre><code>POST /auth/login
+Content-Type: application/json
+{
+  "username": "usuario_exemplo",
+  "password": "senha_exemplo"
+}</code></pre>
+
+<p>Se as credenciais forem válidas, o servidor retornará um token JWT no corpo da resposta. Este token pode então ser usado em requisições posteriores para acessar rotas protegidas da API.</p>
+
+<p><strong>Exemplo de Solicitação:</strong></p>
+<pre><code>{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyX2V4cGxvbWUiLCJpYXQiOjE2NDE2NzAwMjEsImV4cCI6MTY0MTY3MzYyMX0.q1x_NJ-Gk43sq0m6e5z6Tv7Zz1fI0_gR-5vEwYSvT1s"
+}</code></pre>
+
+<h2>Endpoints Adicionais</h2>
+
+<h3>Depósito</h3>
+<p>Realiza um depósito na conta do usuário.</p>
+
+<p><strong>Endpoint:</strong></p>
+<pre><code>POST /deposit</code></pre>
+
+<p><strong>Corpo da Solicitação (Request Body):</strong></p>
+<pre><code>
+{
+  "amount": 100.00
+}</code></pre>
+
+<p><strong>Exemplo de Resposta (Status 200 - OK):</strong></p>
+<pre><code>{
+  "message": "Depósito realizado com sucesso"
+}</code></pre>
+
+<h3>Saque</h3>
+<p>Realiza um saque na conta do usuário.</p>
+
+<p><strong>Endpoint:</strong></p>
+<pre><code>POST /withdraw</code></pre>
+
+<p><strong>Corpo da Solicitação (Request Body):</strong></p>
+<pre><code>
+{
+  "amount": 50.00
+}</code></pre>
+
+<p><strong>Exemplo de Resposta (Status 200 - OK):</strong></p>
+<pre><code>{
+  "message": "Saque realizado com sucesso"
+}</code></pre>
+
+
 <h2>Uso</h2>
 <ol>
-  <li>Clone o repositório: <code>git clone https://github.com/Guilherme76/MandacaruBroker_Parte2.git</code></li>
+  <li>Clone o repositório: <code>git clone https://github.com/Guilherme76/MandacaruBroker_Parte2</code></li>
   <li>Importe o projeto em sua IDE preferida.</li>
   <li>Configure o banco de dados e as propriedades de aplicação conforme necessário. A aplicação original utiliza o PostgreSQL como banco de dados. Certifique-se de ter um servidor PostgreSQL em execução e atualize as configurações de banco de dados no arquivo <code>application.properties</code>.</li>
   <li>Execute o aplicativo Spring Boot.</li>
@@ -160,7 +233,7 @@
   <li>Java 11 ou superior</li>
   <li>Maven</li>
   <li>Banco de dados</li>
-  <li>PostgreSQL</li>
+  <LI>PostGreSQL
 </ul>
 
 <h2>Tecnologias Utilizadas</h2>
