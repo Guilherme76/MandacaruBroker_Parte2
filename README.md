@@ -160,6 +160,7 @@
   <li>Java 11 ou superior</li>
   <li>Maven</li>
   <li>Banco de dados</li>
+  <li>PostgreSQL</li>
 </ul>
 
 <h2>Tecnologias Utilizadas</h2>
