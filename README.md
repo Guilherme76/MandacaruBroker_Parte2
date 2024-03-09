@@ -4,19 +4,15 @@
 <p>A MandaCaru Broker API é uma aplicação Spring Boot desenvolvida para facilitar o gerenciamento de informações relacionadas a ações (stocks) por meio de operações CRUD (Create, Read, Update, Delete). Com essa API, os usuários podem realizar diversas operações, como listar todas as ações disponíveis, obter detalhes de uma ação específica, criar novas ações, atualizar informações de ações existentes e excluir ações do sistema.</p>
 
 <h2>Parâmetros da API</h2>
-<p>A Mandacaru Broker API aceita os seguintes parâmetros em suas solicitações:</p>
+<p>O Mandacaru Broker API aceita os seguintes parâmetros em suas solicitações:</p>
 
-<h3>symbol</h3>
-<p>O símbolo da ação, que deve consistir em três letras seguidas de um número. Por exemplo: BBAS3.</p>
+<p><strong>• symbol: </strong>O símbolo da ação, que deve consistir em três letras seguidas de um número. Por exemplo: BBAS3.</p>
 
-<h3>companyName</h3>
-<p>O nome da empresa associada à ação.</p>
+<p><strong>• companyName: </strong>O nome da empresa associada à ação.</p>
 
-<h3>price</h3>
-<p>O preço da ação.</p>
+<p><strong>• price: </strong>O preço da ação.</p>
 
-<h3>id</h3>
-<p>O ID único associado a cada ação na plataforma.</p>
+<p><strong>• id: </strong>O ID único associado a cada ação na plataforma.</p>
 
 <h2>Recursos</h2>
 
@@ -26,8 +22,7 @@
 <p><strong>Endpoint:</strong></p>
 <pre><code>GET /stocks</code></pre>
 
-<p><strong>Parâmetros:</strong></p>
-<p>Nenhum</p>
+<p><strong>Exemplo de Resposta:</strong></p>
 
 <pre><code>{
   {
@@ -55,12 +50,11 @@
 
 <p><strong>Parâmetros:</strong></p>
 
-<p><code>{id}</code>: O ID único da ação que deseja ser obtida.</p>
+<p><strong>id:</strong> O ID único da ação que deseja ser obtida.</p>
 
 <p><strong>Exemplo de Solicitação</strong></p>
 
-<p><code>http
-GET /stocks/1</code></p>
+<pre><code>GET /stocks/1</code></pre>
 
 <p><strong>Exemplo de Resposta:</strong></p>
 
@@ -78,9 +72,6 @@ GET /stocks/1</code></p>
 
 <p><strong>Endpoint:</strong></p>
 <pre><code>POST /stocks</code></pre>
-
-<p><strong>Parâmetros:</strong></p>
-<p>Nenhum.</p>
 
 <p><strong>Corpo da Solicitação (Request Body):</strong></p>
 <pre><code>
@@ -101,7 +92,7 @@ GET /stocks/1</code></p>
 
 <p>Este endpoint permite a criação de uma nova ação. Para isso, você precisa fornecer os detalhes da nova ação no corpo da solicitação.</p>
 
-<p>Você deve incluir o símbolo da ação, o nome da empresa e o preço no formato JSON.</p>
+<p>Também é necessário você incluir o símbolo da ação, o nome da empresa e o preço no formato JSON.</p>
 
 <h3>Atualizar uma Ação por ID</h3>
 <p>Atualiza os detalhes de uma ação específica com base no ID.</p>
@@ -111,7 +102,7 @@ GET /stocks/1</code></p>
 
 <p><strong>Parâmetros:</strong></p>
 
-<p><code>{id}</code>: O ID único da ação que deseja ser atualizada.</p>
+<p><strong>id:</strong> O ID único da ação que deseja ser atualizada.</p>
 
 <p><strong>Corpo da Solicitação (Request Body):</strong></p>
 <pre><code>{
@@ -119,8 +110,6 @@ GET /stocks/1</code></p>
   "companyName": "Banco do Brasil",
   "price": 59.97
 }</code></pre>
-
-<p>Você deve incluir o símbolo da ação, o nome da empresa e o novo preço no formato JSON.</p>
 
 <strong></p>Exemplo de Resposta (Status 200 - OK):</strong></p>
 
@@ -143,12 +132,11 @@ GET /stocks/1</code></p>
 
 <p><strong>Parâmetros:</strong></p>
 
-<p><code>{id}</code>: O ID único da ação que deseja ser excluída.</p>
+<p><strong>id:</strong> O ID único da ação que deseja ser excluída.</p>
 
 <strong></p>Exemplo de Solicitação:</strong></p>
 
-<p><code>http
-DELETE /stocks/3</code></p>
+<pre><code>DELETE /stocks/3</code></pre>
 
 <strong></p>Exemplo de Resposta (Status 204 - No Content):</strong></p>
 <p>Nenhum conteúdo na resposta, apenas o status 204 indicando que a exclusão foi bem-sucedida.</p>
@@ -184,7 +172,7 @@ DELETE /stocks/3</code></p>
 <p>Essas tecnologias trabalham em conjunto para fornecer uma base sólida para a Mandacaru Broker API, permitindo o desenvolvimento de uma aplicação eficiente, escalável e de alto desempenho para gerenciar informações sobre ações de forma confiável e segura.</p>
 
 <h2>Contribuições</h2>
-<p>Contribuições são bem-vindas!</p>
+<p>Caso queira contribuir com a ideia ou relatar um problema, sinta-se a vontade para abrir uma Issue ou um Pull Request, toda e qualquer contribuição será bem-vindas!</p>
 
 <h2>Licença</h2>
 <p>Este projeto está licenciado sob a Licença MIT.</p>
